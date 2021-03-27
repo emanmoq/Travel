@@ -115,6 +115,18 @@ jQuery(function ($) {
   $(".navbar .nav-link").click(function(){
     $(".collapse").removeClass("show");
   })
+
+$(".navbar-toggler").click(function(){
+  $(".overlay").css("display","block")
+});
+$(".close").click(function(){
+  $(".overlay").css("display","none");
+  $(".collapse").removeClass('show');
+})
+$(".overlay").click(function(){
+  $(this).css("display","none");
+  $(".collapse").removeClass('show');
+});
   // declare rating 
   $(".my-rating").starRating({
     starSize: 16,

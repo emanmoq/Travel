@@ -33,7 +33,6 @@ ul{
 }
 ul li{
     list-style-type: none;
-    margin-bottom:19px;
 }
 body{
      font-size: 16px;
@@ -406,7 +405,7 @@ border-radius:  275px 275px 0 275px;
     width:100%;
     text-align: center;
 }
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+.galleryCar.owl-carousel .owl-nav button.owl-next, .galleryCar.owl-carousel .owl-nav button.owl-prev{
     width:60px;
     height:60px;
     border-radius: 50%;
@@ -687,7 +686,7 @@ footer{
 
 .socialIcons li{
     display: inline-block;
-    margin-right:25px;
+    margin-left:25px;
     text-align: center;
     transition: all .5s;
 
@@ -709,6 +708,23 @@ font-size:1.125em;
 .modal.show .modal-dialog{
     max-width: 70%;;
 }
+.overlay{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 99;
+    display: none;
+}
+header .close{
+    display: none;
+}
+.close{
+    float: left;
+    text-align: left;
+    display: none;
+    margin:20px
+}
 .close{
     display: inline-block;
     text-align: left;
@@ -719,7 +735,7 @@ font-size:1.125em;
     top: 0 !important;
     z-index: 555;
     animation-duration: .5s;
-    background: #272B4B;
+    background: var(--footer-background);
     position: fixed !important;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 20px 3px;
     transition: 1s all;
@@ -812,14 +828,12 @@ font-size:1em;color:var(--font-color)
     .owl-carousel .owl-stage-outer{
     overflow: hidden;
 }
-    .heroImg img{
-        width:100%;
-        height: auto;
-    }
+
     .hero{
-        padding:20px 0;
-        background-image:none;
-        background-image: linear-gradient(45deg ,#426CD9,#284BA6);
+        padding-top:200px
+    }
+    .startForm .form-group{
+        width:100%;
     }
     .heroImg{
         margin-top:0;
@@ -829,58 +843,113 @@ font-size:1em;color:var(--font-color)
         width:100%;
     float: none;
     }
-
+    .startForm{
+        height: auto;
+    }
+    .startBox{
+        height:auto
+    }
+    .startForm .form-group{
+        padding-right:0;;
+    }
+    .startForm .form-group.date .form-control{
+        padding-right:30px;
+    }
+    .date .dategroup{
+        width:100%;
+    }
+    .dategroup i {
+        position: absolute;
+        right: 6px;}
+.startBtn{
+width:100%;
+height: 40px;;
+}
+.about{
+    padding:50px 0;
+}
+.reserv{
+    padding:50px 0;
+}
+.counterBox{
+    margin-top:10px;
+}
+.aboutItem{
+    height:auto
+}
     .navbar-expand-lg .navbar-nav .nav-link:before{
         display:none;
     }
-    .subscribeBtn{
-        height: 70px;
-        width: 113px;
+    .navbar-collapse{
+        position: absolute;
+        width:70%;
+        background-color: white;
+        right: -15px;
+        top: -20px;
+        height:100vh;
     }
-.services{
-    padding:50px 0;
-}
+    .navbar-nav {
+        padding-top:30px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-item .nav-link,.navbar-expand-lg .navbar-nav .nav-item.active .nav-link{
+        color:var(--maincolor)
+    }
+    header .close{
+        display: block;
+    }
+    .gallery{
+        padding:50px 0;
+    }
+    .clientBox{
+        height:auto
+    }
+    .PriceBox{
+        margin-bottom: 20px;;
+    }
+    .contactUs:before {display: none;}
+    .contactUs {
+        background-image: linear-gradient(45deg ,var(--contact-background-gradiant1) 0% ,var(--contact-background-gradiant2));
+    
+    }
+        .sendBtn {
+            width:100%;
+            float: none;
+            margin-bottom:20px
+        }
+        .contactList li{
+            margin-bottom:15px;
+        }
+
+    .modal.show .modal-dialog{
+      max-width:100%;
+    
+    }
+    .reservBtn{
+        width:100%;
+    }
+    .modal-content{
+        padding:20px;
+    }
+
 .sectionTitle{
     margin-bottom:50px;
 }
 
-.servicesBox{
-    height:auto;
-    padding:30px;
-}
-.marginAbout{
-    margin-top: 20px;;
-}
+
 .clients{
     padding:50px 0;
 }
-.subscribe{
-    top:auto;
-}
-.subscribe .container{
-    border-radius: 0;
-    padding:30px 20px;;
+.copyRight{
+    padding:0;
 }
    footer{
        padding:20px 0;
    }
     .socialIcons{
         text-align: right;
-        margin-top:20px;
-        margin-bottom:20px;
+        margin-top:20px
     }
-    footer .logo{
-        float: none;
-    }
-    .socialIcons li{
-        float: none;
-    }
-    .requestBtn{
-        width:100%;
-    }
-    .heroText{
-        margin-top: 90px;
-    }
+
     button.navbar-toggler {
         position: relative;
         border: none;
@@ -917,10 +986,24 @@ font-size:1em;color:var(--font-color)
     .contactUs{
         padding:20px 0;
     }
-    .marginBox{
-        margin-top:50px
+    .copyRight h3{
+        float:none;
     }
-    
+    .modalForm li.infoForm{
+        width:100%;
+    }
+    .modal-body {
+        padding: 20px
+    }
+    .modalStartForm.startForm .form-group{
+        width:100%;
+    }
+    .modal .startBox{
+        border:26px solid #F7F9FC
+    }
+    .startBox{
+        border:26px solid rgba(213, 226, 230, .75)
+    }
 }
 @media(min-width:768px) and (max-width:1023px){
     body{
@@ -930,18 +1013,21 @@ font-size:1em;color:var(--font-color)
         overflow: hidden;
         padding:20px 5;
     }
+    .navbar-brand.logo {
+        float: none;
+        width: 117px;
+        margin-left: 31px;
+    }
     .clientBox{
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
-    .aboutUs .container{
-padding:50px 20px;
-border-radius: 0;;
-    }
-   .marginAbout{
-       margin-top:0;
-   }
+.contactBtn{
+    width:90px
+}
+
    .clients{
        padding:50px 0;
+       padding-bottom:  70px;
    }
    .sectionTitle{
        margin-bottom:20px;
@@ -968,29 +1054,17 @@ footer{
     border-radius: 0;;
 }
     .hero{
-        padding:20px 0;
+        padding-top:160px;
+        padding-bottom:50px;
     }
   
     .socialIcons{
         text-align: center;
     }
-    .socialIcons li{
-        float: none;
-    }
   .marginBox{
       margin-top:0;
   }
-    .heroText{
-        margin-top: 20px;
-    }
 
-    .subscribeBtn{
-        width:140px;
-    }
-
-    .marginForm{
-        margin-left:24px;
-    }
     .navbar-expand-lg .navbar-collapse{
         display: flex;
         flex-basis: auto;
@@ -1000,8 +1074,7 @@ footer{
             display: none;
          } 
     .navbar{
-        width:70%;
-        margin-top:20px;
+        width:85%;
     }
          .navbar-nav {
             display: -ms-flexbox;
@@ -1010,5 +1083,49 @@ footer{
                 -ms-flex-direction: row;
                 flex-direction: row;
             }
-    
+            .navbar-expand-lg .navbar-nav .nav-item{
+                padding:10px;
+            }
+            .modalForm li.infoForm{
+                width:30.5%
+            }
+            .modal-body {
+                padding:20px 16px;
+            }
+            .modal.show .modal-dialog {
+                max-width: 100%;
+            }
+            .modal .startBox{
+                border:26px solid #F7F9FC
+            }
+            .startBox{
+                border:26px solid rgba(213, 226, 230, .75)
+            }
+            .aboutCar .owl-nav, .clientCarusel .owl-nav{
+                top:auto;
+                text-align: center;
+            }
+            .aboutCar.owl-carousel .owl-nav button.owl-prev, .clientCarusel.owl-carousel .owl-nav button.owl-prev{
+                right:auto;
+            }
+            .aboutCar.owl-carousel .owl-nav button.owl-next, .aboutCar.owl-carousel .owl-nav button.owl-prev, 
+            .clientCarusel.owl-carousel .owl-nav button.owl-next, .clientCarusel.owl-carousel .owl-nav button.owl-prev{
+                left:auto;
+                margin:10px;
+                position: relative;
+
+
+            }
+            .reserv .contactBtn{
+                margin-bottom:20px
+            }
+.PriceBox{
+    margin-bottom:20px
+}
+}
+@media(min-width:1024px) and (max-width:1200px){
+    .owl-carousel .owl-stage-outer{
+        overflow: hidden;
+        padding:20px 5;
+    }
 }
